@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://use.fontawesome.com/releases/v6.0.0/css/all.css');
+
+
+/* Variables */
+:root {
+  --color1: #4CAF50;
+  --color2: #00B0FF;
+  --color3: #F50057;
+}
+
+
+/* Globals */
+body {
+    margin: 0;
+    background: #f0f0f0;
+}
+
+h6 {
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+a {
+    color: #fff;
+    transition: 1s all ease-in-out;
+}
+
+a:hover {
+    color: var(--color1);
+    text-shadow: 0 0 5px #fff;
+    transition: .1s all ease-in-out;
+}
+
+button {
+    position: absolute;
+    bottom: -60px;
+    right: 2px;
+    border: 0;
+    background: #2196F3;
+    padding: 10px 22px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 1px -2px #0003;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    transition: .7s all ease-in-out;
+}
+
+button:hover {
+    background: #1565c0;
+    box-shadow: 0 5px 10px #0005;
+    cursor: pointer;
+    transition: .1s all ease-in-out;
+}
+
+.row {position: relative;}
+
+.container {
+    margin: 14vh 0;
+    background: #fff;
+    padding: 5vw;
+    box-shadow: 5px 5px 10px #0001;
+}
+
+
+/* Sections */
+.module-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;
+    max-width: 1225px;
+    margin: 0 auto;
+}
+
+.module {
+    width: clamp(345px, 100%, 900px);
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+label[for="type"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86px;
+    width: 86px;
+    background: var(--color1);
+    border-radius: 50px;
+    padding: 5px;
+    margin: 0 110px 0 auto;
+} 
+
+label[for="type"] span {
+    color: var(--color1);
+    background: #fff;
+    border-radius: 20px;
+    padding: 3px 6px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+}
+
+.card {
+    margin-top: 110px;
+    border-radius: 24px 8px 24px 8px;
+    border: 3px solid var(--color1);
+    background: url("../public/img/paper.png") top left / cover;
+}
+
+.card .logo {
+    height: 190px;
+    position: relative;
+    border-radius: 21px 5px 0 0;
+}
+
+.card .website,
+.card .bookmark {
+    position: absolute;
+    background: var(--color1);
+    box-shadow: 0 4px 4px 0 #0004;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 30px;
+    left: 0;
+    border-radius: 0 8px 8px 0;
+    height: 60px;
+    width: 60px;
+}
+
+.card .bookmark {
+    top: 0;
+    left: initial;
+    right: 25px;
+    border-radius: 0 0 8px 8px;
+}
+
+.card .graphic {
+    position: absolute;
+    background: #fff;
+    top: -80px;
+    right: -3px;
+    width: 256;
+    height: 256px;
+    padding: 7px;
+    border-radius: 8px 24px;
+    border: 3px solid var(--color1);
+}
+
+.card .graphic h6 {
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+    width: calc(100% - 48px);
+    padding: 14px 17px;
+    background: #0006;
+    border-radius: 0 0 8px 24px;
+}
+
+.card span.type {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: var(--color1);
+    background: #fff;
+    border: 2px solid var(--color1);
+    border-radius: 100px;
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+.card .graphic img {
+    width: 256px;
+    border-radius: 8px 24px 8px 24px;
+}
+
+.card .stats {
+    min-height: 140px;
+    background: #000a;
+    border-radius: 0 0 21px 5px;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.card .stats h6 {padding: 8px 15px 0;}
+
+.card .stats h6 span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card .chain {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+.card .chain h6 {
+    width: 130px;
+    text-align: right;
+    padding: 5px 2px;
+}
+
+.card .chip {
+    color: #D32F2F;
+    font-size: 13px;
+    width: max-content;
+    background: #FEEBEE;
+    padding: 2px 10px 2px 2px;
+    margin: 0 0 0 auto;
+    border-radius: 100px;
+    border: 2px solid #D32F2F;
+    transition: .5s all ease-in-out;
+}
+
+.card .chip i {
+    background: #FECDD2;
+    border-radius: 50px;
+    padding: 6px 7px;
+    margin-right: 10px;
+    transition: .5s all ease-in-out;
+}
+
+.card .chip:hover {
+    background: #D32F2F;
+    border: 2px solid #fff;
+    color:#fff;
+    cursor: pointer;
+    transition: .1s all ease-in-out;
+}
+
+.card .chip:hover i {
+    background: #e77;
+    fill: #fff;
+    transition: .1s all ease-in-out;
+}
+
+
+/* Crypto */
+.crypto label[for="type"] {background: var(--color2);} 
+.crypto label[for="type"] span {color: var(--color2);}
+.crypto .card {border: 3px solid var(--color2);}
+.crypto .card .website,
+.crypto .card .bookmark {background: var(--color2);}
+.crypto .card .graphic {border: 3px solid var(--color2);}
+.crypto .card a:hover {color: var(--color2);}
+
+.crypto .card span.type {
+  border: 2px solid var(--color2); 
+  color: var(--color2)
+}
+
+.crypto .card .chip {
+    color: var(--color1);
+    background: #E8F5E9;
+    border: 2px solid var(--color1);
+}
+
+.crypto .card .chip i {background: #C8E6C9;}
+
+.crypto .card .chip:hover {
+    background: var(--color1);
+    border: 2px solid #fff;
+    color:#fff;
+}
+
+.crypto .card .chip:hover i {
+    background: #9c9;
+    fill: #fff;
+}
+
+
+/* NFT */
+.nft label[for="type"] {background: var(--color3);} 
+.nft label[for="type"] span {color: var(--color3);}
+.nft .card {border: 3px solid var(--color3);}
+.nft .card .website,
+.nft .card .bookmark {background: var(--color3);}
+.nft .card .graphic {border: 3px solid var(--color3);}
+.nft .card a:hover {color: var(--color3);}
+.nft .card span.type {
+  border: 2px solid var(--color3);
+  color: var(--color3)
+}
+
+
+/* Mobile */
+@media (max-width: 1300px) {
+    .container {
+        min-height: 100vh;
+        padding: 5vw;
+        margin: 0 5vw;
+    }
+    .module-wrap {grid-template-columns: repeat(2, 1fr);}
+    .module-wrap .module:first-of-type {grid-column: span 2;}
+}
+
+@media (max-width: 950px) {
+    .container {padding: 10vw;}
+    .module-wrap {grid-template-columns: repeat(1, 1fr);}
+    .module-wrap .module:first-of-type {grid-column: span 1;}
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 10vw;
+        margin: 0;
+        min-width: 345px;
+    }
+}
